@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="contact-page">
+
+    <div id="overlay-menu">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <nav class="menu-links">
+            <a href="index.html">Home</a>
+            <a href="brands.html">Brands</a>
+            <div class="submenu">
+                <a href="toyota.html">Toyota</a>
+                <span>/</span>
+                <a href="honda.html">Honda</a>
+                <span>/</span>
+                <a href="nissan.html">Nissan</a>
+                <span>/</span>
+                <a href="subaru.html">Subaru</a>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+
+    <div class="contact-container">
+
+        <header class="mobile-menu-header">
+             <button class="menu-icon" aria-label="Open menu">
+                 <div class="bar"></div>
+                 <div class="bar"></div>
+                 <div class="bar"></div>
+             </button>
+        </header>
+        <header class="main-header">
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="brands.html">Brands</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+
+        <main class="contact-main">
+            <h1 class="contact-title">Contact Us</h1>
+            <div class="contact-content-wrapper">
+                <div class="contact-text">
+                    <p>Have a question, suggestion, or request? We'd love to hear from you!</p>
+                    <p>At AutoScope, we're always looking to expand and improve. Whether you want to:</p>
+                    <ul>
+                        <li>Suggest a new car model or brand to feature</li>
+                        <li>Ask a question about the content on our site</li>
+                        <li>Share feedback to help us improve</li>
+                        <li>Or just talk cars with us</li>
+                    </ul>
+                    <p>—this is the place to reach out.</p>
+                    <p>Fill out the form, and we'll get back to you as soon as possible.</p>
+                    <p>Be the best, know the best—together.</p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name here">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your e-mail here">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="8" placeholder="Enter message and / or inquiries."></textarea>
+                    </div>
+                    <div class="form-group submit-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
