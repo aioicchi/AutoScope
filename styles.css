@@ -38,7 +38,6 @@ body {
 
 /* ---------------------------------- */
 /* ---   MAIN HEADER/NAV STYLES   --- */
-/* --- (Home, Brands, Contact)    --- */
 /* ---------------------------------- */
 
 .main-header {
@@ -69,6 +68,7 @@ body {
     color: #cccccc;
 }
 
+/* --- Styles for Mobile Header Icon --- */
 .mobile-menu-header {
     position: absolute;
     top: 0;
@@ -281,6 +281,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Article pages ONLY show hamburger, regardless of screen size */
 .article-page header.mobile-menu-header {
     display: flex;
     justify-content: flex-end;
@@ -292,8 +293,7 @@ body {
     z-index: 10;
     margin-bottom: 0;
 }
-
-.article-page .mobile-menu-header .menu-icon {
+.article-page .menu-icon {
      display: block;
      background: none;
      border: 1px solid #555;
@@ -302,10 +302,13 @@ body {
      cursor: pointer;
      transition: background-color 0.2s ease-in-out;
 }
-.article-page .mobile-menu-header .menu-icon:hover {
+
+
+.article-page .menu-icon:hover {
     background-color: #333;
 }
-.article-page .mobile-menu-header .menu-icon .bar {
+
+.article-page .menu-icon .bar {
     display: block;
     width: 25px;
     height: 2px;
@@ -546,18 +549,24 @@ body {
     text-align: center;
 }
 
+/* --- DESKTOP HOME PAGE STYLES --- */
 .hero-content h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 8rem;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 10rem;
     font-weight: 400;
+    line-height: 1;
     margin: 0;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    margin: 10px 0 30px 0;
+    font-size: 1.50rem;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    line-height: 1;
     letter-spacing: 1px;
+    text-align: center;
+    max-width: 90%;
 }
 
 .cta-button {
@@ -792,9 +801,15 @@ body {
     color: #fff;
 }
 
+.about-page .site-footer p {
+    display: block;
+    margin: 0;
+}
+
 
 /* --- Media Query for Mobile Nav (Brands, Contact, About, Home) --- */
 @media (max-width: 768px) {
+    /* Hide the main desktop header on ALL relevant pages */
     .home-page .main-header,
     .brands-page .main-header,
     .contact-page .main-header,
@@ -802,14 +817,13 @@ body {
         display: none;
     }
 
-
+    /* Show the mobile hamburger icon header on ALL relevant pages */
     .home-page .mobile-menu-header .menu-icon,
     .brands-page .mobile-menu-header .menu-icon,
     .contact-page .mobile-menu-header .menu-icon,
     .about-page .mobile-menu-header .menu-icon {
         display: block;
     }
-
 
     .mobile-menu-header {
         top: 20px;
@@ -882,7 +896,6 @@ body {
         max-width: 100%;
         align-items: flex-start;
     }
-
     .brands-page .brand-desc {
         font-size: 1rem;
         text-align: justify;
@@ -892,6 +905,26 @@ body {
     .brands-page .brand-btn {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .home-page .hero-content h1 {
+        font-size: 5rem;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .home-page .hero-content p {
+        font-size: 1rem;
+        margin-top: -5px;
+        margin-bottom: 15px;
+        margin-right: 50px; 
+    }
+
+    .site-footer p {
+        font-size: .8em;
+        text-align: center;
+        display: block;
+        margin: 0;
     }
 }
 
@@ -912,4 +945,23 @@ body {
     #overlay-menu .submenu span {
         font-size: 1.3rem;
     }
+}
+
+/* ---------------------------------- */
+/* ---        FOOTER STYLES       --- */
+/* ---------------------------------- */
+
+.site-footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.site-footer p {
+    display: inline-block;
+    margin: 0 auto;
 }
