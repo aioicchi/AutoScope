@@ -1,0 +1,915 @@
+/* --- GLOBAL STYLES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge, etc.) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+/* ---------------------------------- */
+/* ---   MAIN HEADER/NAV STYLES   --- */
+/* --- (Home, Brands, Contact)    --- */
+/* ---------------------------------- */
+
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #cccccc;
+}
+
+.mobile-menu-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 5%;
+    z-index: 11;
+}
+
+.mobile-menu-header .menu-icon {
+    display: none;
+    background: none;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.mobile-menu-header .menu-icon .bar {
+     display: block;
+     width: 25px;
+     height: 2px;
+     background-color: #fff;
+     margin: 5px 0;
+}
+
+
+/* ---------------------------------- */
+/* ---      BRANDS PAGE STYLES    --- */
+/* ---------------------------------- */
+
+.brands-page {
+    background-color: #0d0d0d;
+    color: white;
+}
+
+.brands-page .brands-container1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brands-page .brands-brands {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.brands-page .main-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.brands-page .main-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.brands-page .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.brands-page .main-nav a:hover {
+    color: #cccccc;
+}
+
+.brands-page .brands-hero {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.brands-page .brands-background1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.brands-page .brands-text27 {
+    font-size: 96px;
+    font-weight: 600;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.brands-page .brands-text26 {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.brands-page .brand-card {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.brands-page .brand-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.brands-page .brand-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 60px;
+}
+
+.brands-page .brand-title {
+    font-size: 42px;
+    font-weight: 700;
+    min-width: 200px;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.brands-page .brand-content {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brands-page .brand-desc {
+    font-family: "Inria Serif", serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 24px 0;
+    color: #f1f1f1;
+    text-align: justify;
+}
+
+.brands-page .brand-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.brands-page .brand-btn:hover {
+    background-color: #4d9eff;
+    color: white;
+}
+
+/* ---------------------------------- */
+/* ---     CAR ARTICLE STYLES     --- */
+/* ---------------------------------- */
+
+.article-page {
+    background-color: #222222;
+    color: #e0e0e0;
+}
+
+.article-page .container {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.article-page header.mobile-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 20px 5%;
+    z-index: 10;
+    margin-bottom: 0;
+}
+
+.article-page .mobile-menu-header .menu-icon {
+     display: block;
+     background: none;
+     border: 1px solid #555;
+     border-radius: 4px;
+     padding: 6px 10px;
+     cursor: pointer;
+     transition: background-color 0.2s ease-in-out;
+}
+.article-page .mobile-menu-header .menu-icon:hover {
+    background-color: #333;
+}
+.article-page .mobile-menu-header .menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.article-page main {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+
+.article-page h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.article-page h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #c0c0c0;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.article-page h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.article-page p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 24px;
+    line-height: 1.8;
+    text-indent: 2em;
+}
+
+.article-page .content-block,
+.article-page .specs-block {
+    padding-left: 10px;
+}
+
+.article-page .main-image-container {
+    margin: 40px 0 50px 0;
+    text-align: center;
+}
+
+.article-page .main-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.article-page .specs-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.article-page .specs-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #c0c0c0;
+}
+
+.article-page .specs-list strong {
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ---------------------------------- */
+/* ---     OVERLAY MENU STYLES    --- */
+/* ---------------------------------- */
+
+#overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.98);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#overlay-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#overlay-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#overlay-menu .menu-links {
+    text-align: center;
+}
+
+#overlay-menu .menu-links > a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 25px 0;
+    transition: color 0.2s ease;
+}
+
+#overlay-menu .menu-links > a:hover {
+    color: #a0a0a0;
+}
+
+#overlay-menu .submenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: -10px 0 25px 0;
+}
+
+#overlay-menu .submenu a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+#overlay-menu .submenu a:hover {
+    color: white;
+}
+
+#overlay-menu .submenu span {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+
+/* ---------------------------------- */
+/* ---        HOME PAGE STYLES      --- */
+/* ---------------------------------- */
+
+.home-page {
+    background-color: #000;
+    color: white;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Position and hide mobile header on desktop */
+.home-page .mobile-menu-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 5%;
+    z-index: 10;
+}
+
+.home-page .mobile-menu-header .menu-icon {
+    display: none;
+    background: none;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.home-page .mobile-menu-header .menu-icon .bar {
+     display: block;
+     width: 25px;
+     height: 2px;
+     background-color: #fff;
+     margin: 5px 0;
+}
+
+
+.hero-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 8rem;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 10px 0 30px 0;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-button svg {
+    margin-bottom: -1px;
+}
+
+/* ---------------------------------- */
+/* ---      CONTACT PAGE STYLES   --- */
+/* ---------------------------------- */
+
+.contact-page {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.contact-container {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.contact-main {
+    padding: 50px 0;
+    padding-top: 100px;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.contact-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.contact-text {
+    flex-basis: 45%;
+    line-height: 1.7;
+}
+
+.contact-text p {
+    margin-bottom: 20px;
+}
+
+.contact-text ul {
+    list-style-position: inside;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-text ul li {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex-basis: 50%;
+    background-color: #111;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #333;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-group {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.submit-group input[type="submit"] {
+    background-color: #d9d9d9;
+    color: #111;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-group input[type="submit"]:hover {
+    background-color: #fff;
+}
+
+/* --- Media Query for Tablet View --- */
+@media (max-width: 900px) {
+    .contact-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .contact-text {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .contact-form {
+        width: 100%;
+        flex-basis: auto;
+        max-width: none;
+        padding: 25px;
+        background-color: #111;
+        border: 1px solid #333;
+        border-radius: 16px;
+        margin-bottom: 30px;
+    }
+
+    .contact-page .main-header {
+       position: static;
+       padding: 30px 0 0 0;
+    }
+
+    .contact-main {
+        padding: 40px 0 50px 0;
+    }
+
+    .contact-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+}
+
+
+/* ---------------------------------- */
+/* ---      ABOUT PAGE STYLES     --- */
+/* ---------------------------------- */
+
+.about-page {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.about-container {
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+.about-main {
+    padding: 50px 0 50px 0;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-family: 'Inria Serif', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.about-content p.tagline {
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 40px;
+    text-align: center;
+    text-indent: 0;
+    color: #fff;
+}
+
+
+/* --- Media Query for Mobile Nav (Brands, Contact, About, Home) --- */
+@media (max-width: 768px) {
+    .home-page .main-header,
+    .brands-page .main-header,
+    .contact-page .main-header,
+    .about-page .main-header {
+        display: none;
+    }
+
+
+    .home-page .mobile-menu-header .menu-icon,
+    .brands-page .mobile-menu-header .menu-icon,
+    .contact-page .mobile-menu-header .menu-icon,
+    .about-page .mobile-menu-header .menu-icon {
+        display: block;
+    }
+
+
+    .mobile-menu-header {
+        top: 20px;
+        right: 5%;
+    }
+
+    .contact-page .contact-main,
+    .about-page .about-main {
+        padding-right: 15%;
+        padding-left: 5%;
+        text-align: left;
+    }
+
+    .contact-page .contact-title,
+    .about-page .about-title {
+        text-align: left;
+    }
+
+    .contact-page .contact-text p,
+    .contact-page .contact-text ul {
+        text-align: left;
+    }
+
+    .about-page .about-content p {
+        text-align: left;
+         text-indent: 0;
+    }
+    .about-page .about-content p.tagline {
+        text-align: center;
+    }
+
+    .brands-page .brands-hero {
+        height: 100vh;
+        padding-top: 100px;
+        min-height: 0;
+    }
+
+    .brands-page .brands-text27 {
+        font-size: 5rem;
+    }
+
+    .brands-page .brands-text26 {
+        bottom: 30px;
+        font-size: 1rem;
+    }
+
+    .brands-page .brand-card {
+        height: auto;
+        min-height: 70vh;
+        padding: 15% 5%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .brands-page .brand-overlay {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+        max-width: 100%;
+    }
+    .brands-page .brand-title {
+        font-size: 2.5rem;
+        min-width: auto;
+        border-bottom: 2px solid white;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+    .brands-page .brand-content {
+        max-width: 100%;
+        align-items: flex-start;
+    }
+
+    .brands-page .brand-desc {
+        font-size: 1rem;
+        text-align: justify;
+        text-indent: 2em;
+        line-height: 1.6;
+    }
+    .brands-page .brand-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Overlay Menu Desktop Adjustments --- */
+@media (min-width: 769px) {
+
+    #overlay-menu .menu-links > a {
+        font-size: 3.5rem;
+        margin: 35px 0;
+    }
+
+    #overlay-menu .submenu {
+        gap: 30px;
+        margin: -15px 0 35px 0;
+    }
+
+    #overlay-menu .submenu a,
+    #overlay-menu .submenu span {
+        font-size: 1.3rem;
+    }
+}
